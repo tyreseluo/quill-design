@@ -3,5 +3,4 @@ name        = "quill-widgets-simple"
 description = "A simple example of Quill Makepad UI Library."
 edition     = "2021"
 [dependencies]
-makepad-widgets = { git = "https://github.com/tyreseluo/makepad/", branch = "fixed_makepad_version" }
-quill-widgets   = { path = "../../widgets", features = ["Button"] }
+quill-widgets   = { path = "../../widgets", features = ["builtin-makepad-widgets","Button"] }

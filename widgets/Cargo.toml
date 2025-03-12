@@ -6,7 +6,11 @@ license     = "MIT"
 version     = { workspace = true }
 
 [dependencies]
-makepad-widgets = { git = "https://github.com/tyreseluo/makepad/", branch = "fixed_makepad_version" }
+makepad-widgets = { workspace = true }
 
 [features]
-Button = []
+# use the builtin makepad widgets, (recommended).
+# If you don't want to use builtin widgets, you can remove this feature,
+# but note that you need to check the official makepad-widgets crate's compatibility.
+builtin-makepad-widgets = []
+Button                  = []

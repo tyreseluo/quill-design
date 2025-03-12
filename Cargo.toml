@@ -11,3 +11,4 @@ license     = "MIT"
 version     = "0.1.0"
 
 [workspace.dependencies]
+makepad-widgets = { git = "https://github.com/tyreseluo/makepad/", branch = "quill_makepad" }

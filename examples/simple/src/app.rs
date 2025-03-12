@@ -1,4 +1,4 @@
-use makepad_widgets::*;
+use quill_widgets::makepad_widgets::*;
 
 live_design! {
     use link::theme::*;
@@ -11,13 +11,19 @@ live_design! {
         ui: <Root>{
             main_window = <Window>{
                 body = <View>{
-                    flow: Down,
                     spacing: 10,
                     align: {
                         x: 0.5,
                         y: 0.5
                     },
-                    button = <XButton> { }
+                    button = <XButton> {
+                        text: "Primary",
+                    }
+
+                    button_secondary = <XButton> {
+                        type_of: Secondary,
+                        text: "Secondary",
+                    }
                 }
             }
         }
@@ -36,7 +42,6 @@ pub struct App {
 
 impl LiveRegister for App {
     fn live_register(cx: &mut Cx) {
-        crate::makepad_widgets::live_design(cx);
         crate::quill_widgets::live_design(cx);
     }
 }
