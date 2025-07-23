@@ -25,7 +25,10 @@ live_design!{
                             color: #f0f0f0,
                         }
                     }
-                    <QuillButton> {}
+                    <QuillButton> {
+                        type_of: Secondary,
+                        text: "Secondary Button",
+                    }
                 }
             }
         }

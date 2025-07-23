@@ -1,0 +1,8 @@
+[package]
+name = "quill-design-tokens"
+version = "0.1.0"
+edition = "2021"
+description = "Design tokens for Quill"
+
+[dependencies]
+makepad-widgets = { workspace = true }
