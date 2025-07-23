@@ -1,0 +1,12 @@
+[package]
+name        = "quill-widgets"
+description = "Quill Makepad UI Widgets."
+edition     = "2021"
+license     = "MIT"
+version     = "1.0.0"
+
+[dependencies]
+makepad-widgets = { workspace = true }
+
+[features]
+Button                  = []

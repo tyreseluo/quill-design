@@ -1,6 +1,0 @@
-[package]
-name        = "quill-widgets-simple"
-description = "A simple example of Quill Makepad UI Library."
-edition     = "2021"
-[dependencies]
-quill-widgets   = { path = "../../widgets", features = ["builtin-makepad-widgets","Button"] }

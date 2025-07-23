@@ -1,14 +1,14 @@
 [workspace]
-members  = ["widgets", "examples/*"]
+members  = ["packages/*", "examples/*"]
 resolver = "2"
 
 [workspace.package]
 description = "Quill Makepad UI Library."
-authors     = ["Project Robius", "Tyrese Luo <tyreseluo@outlook.com>"]
+authors     = ["Tyrese Luo <tyreseluo@outlook.com>"]
 categories  = ["makepad"]
 edition     = "2021"
 license     = "MIT"
 version     = "0.1.0"
 
 [workspace.dependencies]
-makepad-widgets = { git = "https://github.com/tyreseluo/makepad/", branch = "quill_makepad" }
+makepad-widgets = { git = "https://github.com/tyreseluo/makepad/", branch = "quill_design_used_makepad_version" }

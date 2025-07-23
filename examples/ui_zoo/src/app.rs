@@ -1,29 +1,31 @@
 use quill_widgets::makepad_widgets::*;
 
-live_design! {
+live_design!{
     use link::theme::*;
     use link::shaders::*;
     use link::widgets::*;
-    use quill_widgets::styles::colors::*;
+
     use quill_widgets::button::*;
 
     App = {{App}} {
         ui: <Root>{
             main_window = <Window>{
                 body = <View>{
+                    flow: Right,
                     spacing: 10,
                     align: {
                         x: 0.5,
                         y: 0.5
                     },
-                    button = <XButton> {
-                        text: "Primary",
+                    <View> {
+                        height: 100,
+                        width: 100,
+                        show_bg: true,
+                        draw_bg: {
+                            color: #f0f0f0,
+                        }
                     }
-
-                    button_secondary = <XButton> {
-                        type_of: Secondary,
-                        text: "Secondary",
-                    }
+                    <QuillButton> {}
                 }
             }
         }
@@ -34,29 +36,17 @@ app_main!(App);
 
 #[derive(Live, LiveHook)]
 pub struct App {
-    #[live]
-    ui: WidgetRef,
-    #[rust]
-    counter: usize,
+    #[live] ui: WidgetRef,
 }
 
 impl LiveRegister for App {
     fn live_register(cx: &mut Cx) {
-        crate::quill_widgets::live_design(cx);
-    }
-}
-
-impl MatchEvent for App {
-    fn handle_actions(&mut self, _cx: &mut Cx, actions: &Actions) {
-        if self.ui.button(id!(button1)).clicked(&actions) {
-            self.counter += 1;
-        }
+        quill_widgets::live_design(cx);
     }
 }
 
 impl AppMain for App {
     fn handle_event(&mut self, cx: &mut Cx, event: &Event) {
-        self.match_event(cx, event);
         self.ui.handle_event(cx, event, &mut Scope::empty());
     }
 }

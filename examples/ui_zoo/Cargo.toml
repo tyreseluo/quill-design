@@ -1,0 +1,7 @@
+[package]
+name = "quill-design-ui-zoo"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+quill-widgets = { path = "../../packages/quill-widgets", features = ["Button"] }
